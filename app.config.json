@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "app", // Modificado en app.config.ts
+    "slug": "app", // Modificado en app.config.ts
+    "version": "1.0.0", // Modificado en app.config.ts
+    "orientation": "portrait",
+    "icon": "", // Modificado en app.config.ts
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "", // Modificado en app.config.ts
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "", // Modificado en app.config.ts
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.groundtech.geoviality"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "" // Modificado en app.config.ts
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
